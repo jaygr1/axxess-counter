@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+#toes {
+  text-align: left;
+  float: left;
+  padding-left: 5em;
+  display: inline-block;
+}
+
+#fingers {
+  text-align: right;
+  float: right;
+  padding-right: 5em;
+  display: inline-block;
+}
+
+form {
+  text-align: center;
+  font-size: 1em;
+}
+
+#timer {
+  font-size: 12em;
+  text-align: center;
+}
