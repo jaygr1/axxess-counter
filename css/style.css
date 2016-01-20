@@ -25,3 +25,8 @@ form {
   font-size: 12em;
   text-align: center;
 }
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
