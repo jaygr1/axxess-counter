@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
 function Counter(){
   $('#limit').click(function(e){
     e.preventDefault();
@@ -8,9 +7,9 @@ function Counter(){
 }
 
 function Increment(){
-  var i = 0;
-  var max = parseInt($('input[type="text"]').val());
+  var max = parseInt($('#max').val());
     var callback = function(){
+      var i = parseInt($('#timer').text());
       i++;
       $('#timer').text(i);
       FizzBuzz(i);
@@ -49,19 +48,16 @@ function FizzBuzz(num){
  function Reset(){
   $('#reset').click(function(e){
     e.preventDefault();
-       $('#timer').text();
+       $('#timer').text(0);
      })
   }
-
 function Restart(){
  $('#restart').click(function(e){
    e.preventDefault();
-    // $('#timer').text(0);
-    Increment();
+    $('#timer').text(0);
+    // Increment();
   })
  }
-
  new Counter()
  new Restart()
-
 })
