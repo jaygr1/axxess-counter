@@ -28,5 +28,8 @@ form {
 
 .highlight {
   background-color: yellow;
-  font-weight: bold;
+}
+
+body {
+  background-image: url("../dallas.jpg");
 }
