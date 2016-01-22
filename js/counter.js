@@ -2,9 +2,16 @@ $( document ).ready(function() {
 function Counter(){
   $('#limit').click(function(e){
     e.preventDefault();
-    Increment();
+    var max = parseInt($('#max').val());
+       var i = parseInt($('#timer').text());
+       if (i < max) {
+         Increment();
+       }
   })
 }
+
+
+
 
 function Increment(){
   var max = parseInt($('#max').val());
