@@ -1,6 +1,3 @@
-var restart = false;
-var x = null;
-
 $( document ).ready(function() {
 
 function Counter(){
@@ -15,25 +12,14 @@ function Increment(){
   var max = parseInt($('input[type="text"]').val());
     var callback = function(){
       i++;
-      // $('#restart').click(function(e){
-      //   e.preventDefault();
-      //   restart = true
-      //   return;
-      // })
       $('#timer').text(i);
       FizzBuzz(i);
       if (i >= max) {
         clearInterval(x);
       }
-      // else if (restart == true) {
-      //   return;
-      // }
     }
     var x = setInterval(callback, 1000);
-    restart = false;
 }
-
-
 
 function FizzBuzz(num){
    if (num == 0 || (num % 3 !==0 && num % 5 !== 0)) {
@@ -70,13 +56,9 @@ function FizzBuzz(num){
 function Restart(){
  $('#restart').click(function(e){
    e.preventDefault();
-  //  exit(Increment)
-  //  clearInterval(Increment)
-
-    $('#timer').text(0);
+    // $('#timer').text(0);
     Increment();
- })
- restart = false
+  })
  }
 
  new Counter()
